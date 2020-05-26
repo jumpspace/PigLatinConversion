@@ -1,0 +1,20 @@
+﻿<Window x:Name="LaunchWindow" x:Class="PigLatinConversion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PigLatinConversion"
+        mc:Ignorable="d"
+        Title="Pig Latin Generator" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="InputLabel" Content="_Enter a sentence to convert to Pig Latin:" HorizontalAlignment="Left" 
+               Target="{Binding ElementName=InputTextBox}" Margin="21,19,0,0" VerticalAlignment="Top" Width="290"/>
+        <TextBox x:Name="InputTextBox" HorizontalAlignment="Left" Height="23" Margin="21,50,0,0" TextWrapping="NoWrap" 
+                 VerticalAlignment="Top" Width="636" Cursor="IBeam"/>
+        <Button x:Name="ConvertButton" Content="_Convert" HorizontalAlignment="Left" Margin="670,50,0,0" VerticalAlignment="Top" 
+                Width="89" Height="23" Click="ConvertButton_OnClick" IsDefault="True"/>
+        <TextBox x:Name="ConvertedTextBox" HorizontalAlignment="Left" Height="310" Margin="21,86,0,0" TextWrapping="Wrap" 
+                 IsReadOnly="True" AcceptsReturn="True" VerticalAlignment="Top" Width="636" />
+
+    </Grid>
+</Window>
